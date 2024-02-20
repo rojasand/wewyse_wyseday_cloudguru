@@ -15,7 +15,7 @@ resource "random_string" "random" {
 } 
 
 resource "aws_s3_bucket" "myBucket" {
-  bucket = "testing-bucket-number-${random_string.random}"
+  bucket = "wyseday-${random_string.random}"
   force_destroy = true
 }
 
