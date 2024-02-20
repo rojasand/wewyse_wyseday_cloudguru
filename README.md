@@ -10,6 +10,7 @@ The project is a simple S3 Bucket configured for public read access and Static W
 ## Installation
 1. Login to CloudGuru and Select the Playground AWS
 1. Copy the **Access Key Id** and **Secret Access Key** into the `terraform/main.tf` 
+1. Install [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 1. Install [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) in your machine
 1. configure your AWS CLI by using the given Access Key and Secret Access Key
     ```sh
