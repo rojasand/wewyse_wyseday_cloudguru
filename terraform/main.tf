@@ -3,17 +3,17 @@ variable "region" {
 }
 
 provider "aws" {
-  region     = var.region
+  region = var.region
 }
 
 resource "random_string" "random" {
-  length = 6
+  length  = 6
   special = false
-  upper = false
-} 
+  upper   = false
+}
 
 resource "aws_s3_bucket" "myBucket" {
-  bucket = "wyseday-${random_string.random.result}"
+  bucket        = "wyseday-${random_string.random.result}"
   force_destroy = true
 }
 
@@ -46,7 +46,7 @@ resource "aws_s3_object" "indexHtml" {
   key          = "index.html"
   source       = "../source/static_website/index.html"
   content_type = "text/html"
-  etag = filemd5("../source/static_website/index.html")
+  etag         = filemd5("../source/static_website/index.html")
 }
 
 resource "aws_s3_object" "errorHtml" {
@@ -54,7 +54,7 @@ resource "aws_s3_object" "errorHtml" {
   key          = "error.html"
   source       = "../source/static_website/error.html"
   content_type = "text/html"
-  etag = filemd5("../source/static_website/error.html")
+  etag         = filemd5("../source/static_website/error.html")
 }
 
 resource "aws_s3_bucket_website_configuration" "myBucketWebsite" {
