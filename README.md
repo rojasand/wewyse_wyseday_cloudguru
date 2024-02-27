@@ -25,7 +25,7 @@ The project is a simple S3 Bucket configured for public read access and Static W
     terraform -chdir=terraform apply -auto-approve
     ```
 1. Copy and paste the URL output in the terminal:
-    `S3_Website_Endpoint = "wyseday-######.s3-website-us-east-1.amazonaws.com"`
+    `S3_Website_Endpoint = "http://wyseday-######.s3-website-us-east-1.amazonaws.com"`
 
 ## Credits
 This project was created by this creator of this Repository and is only for educational purposes 

@@ -4,8 +4,6 @@ variable "region" {
 
 provider "aws" {
   region     = var.region
-  access_key = "YOUR_ACCESS_KEY"
-  secret_key = "YOUR_SECRET_ACCESS_KEY"
 }
 
 resource "random_string" "random" {
@@ -15,7 +13,7 @@ resource "random_string" "random" {
 } 
 
 resource "aws_s3_bucket" "myBucket" {
-  bucket = "wyseday-${random_string.random}"
+  bucket = "wyseday-${random_string.random.result}"
   force_destroy = true
 }
 
